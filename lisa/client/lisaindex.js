@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import LisaApp from '../lisa/client/components/LisaApp'
+import LisaApp from './components/LisaApp'
 import { BrowserRouter } from 'react-router-dom'
 
 document.addEventListener('DOMContentLoaded', () => {
