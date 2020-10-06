@@ -9,13 +9,15 @@ server.listen(port, function () {
   console.log('Listening on port', port)
 })
 
+server.use(express.static(path.join(__dirname, 'public')))
+
 server.get('/', function(req, res) {
     var hostname = req.headers.host;
     if (hostname === rikkesimone.com) {
-        res.sendFile(path.join(__dirname+'/portfolio/public'))
+        res.sendFile(path.join(__dirname, 'public', 'portfolioindex.html'))
     }   
     else if (hostname === pawsomepackadventures.co.nz) {
-        res.sendFile(path.join(__dirname+'/lisa/public'))
+        res.sendFile(path.join(__dirname, 'public', 'lisaindex.html'))
     }   
 })
 
