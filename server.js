@@ -3,9 +3,49 @@ const express = require('express')
 
 const server = express()
 
-server.use(express.json())
-server.use(express.static(path.join(__dirname, 'pawsome-pack-adventures/server/public')))
+const port = process.env.PORT || 80
 
+server.listen(port, function () {
+  console.log('Listening on port', port)
+})
+
+server.get('/', function(req, res) {
+    var hostname = req.headers.host;
+    if (hostname === rikkesimone.com) {
+        res.sendFile(path.join(__dirname+'/portfolio/public'))
+    }   
+    else if (hostname === pawsomepackadventures.co.nz) {
+        res.sendFile(path.join(__dirname+'/lisa/public'))
+    }   
+})
+
+server.get('/home', function(req, res) {
+    var hostname = req.headers.host;   
+    if (hostname === pawsomepackadventures.co.nz) {
+        res.sendFile(path.join(__dirname+'/lisa/client/components/Home.jsx'))
+    }   
+})
+
+server.get('/info', function(req, res) {
+    var hostname = req.headers.host;   
+    if (hostname === pawsomepackadventures.co.nz) {
+        res.sendFile(path.join(__dirname+'/lisa/client/components/Info.jsx'))
+    }   
+})
+
+server.get('/gallery', function(req, res) {
+    var hostname = req.headers.host;   
+    if (hostname === pawsomepackadventures.co.nz) {
+        res.sendFile(path.join(__dirname+'/lisa/client/components/Gallery.jsx'))
+    }   
+})
+
+server.get('/contact', function(req, res) {
+    var hostname = req.headers.host;   
+    if (hostname === pawsomepackadventures.co.nz) {
+        res.sendFile(path.join(__dirname+'/lisa/components/Form.jsx'))
+    }   
+})
 
 
 module.exports = server
