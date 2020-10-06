@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <Provider store={store}>
       <PortfolioApp />
     </Provider>,
-    document.getElementById('app')
+    document.getElementById('PortfolioApp')
   )
 })

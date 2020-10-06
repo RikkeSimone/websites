@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from '../client/components/App'
+import LisaApp from '../lisa/client/components/LisaApp'
 import { BrowserRouter } from 'react-router-dom'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <BrowserRouter><App /></BrowserRouter>,
-    document.getElementById('app')
+    <BrowserRouter><LisaApp /></BrowserRouter>,
+    document.getElementById('LisaApp')
   )
 })
