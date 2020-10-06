@@ -7,10 +7,10 @@ import Contact from "./Contact";
 import Resume from "./Resume";
 import About from "./About";
 
-class App extends Component {
+class PortfolioApp extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="PortfolioApp">
         <Nav />
         <Hello />
         <About />
@@ -22,4 +22,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default PortfolioApp;

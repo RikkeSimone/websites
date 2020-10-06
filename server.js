@@ -21,33 +21,33 @@ server.get('/', function(req, res) {
     }   
 })
 
-server.get('/home', function(req, res) {
-    var hostname = req.headers.host;   
-    if (hostname === 'pawsomepackadventures.co.nz') {
-        res.sendFile(path.join(__dirname+'/lisa/client/components/Home.jsx'))
-    }   
-})
+// server.get('/home', function(req, res) {
+//     var hostname = req.headers.host;   
+//     if (hostname === 'pawsomepackadventures.co.nz') {
+//         res.sendFile(path.join(__dirname+'/lisa/client/components/Home.jsx'))
+//     }   
+// })
 
-server.get('/info', function(req, res) {
-    var hostname = req.headers.host;   
-    if (hostname === 'pawsomepackadventures.co.nz') {
-        res.sendFile(path.join(__dirname+'/lisa/client/components/Info.jsx'))
-    }   
-})
+// server.get('/info', function(req, res) {
+//     var hostname = req.headers.host;   
+//     if (hostname === 'pawsomepackadventures.co.nz') {
+//         res.sendFile(path.join(__dirname+'/lisa/client/components/Info.jsx'))
+//     }   
+// })
 
-server.get('/gallery', function(req, res) {
-    var hostname = req.headers.host;   
-    if (hostname === 'pawsomepackadventures.co.nz') {
-        res.sendFile(path.join(__dirname+'/lisa/client/components/Gallery.jsx'))
-    }   
-})
+// server.get('/gallery', function(req, res) {
+//     var hostname = req.headers.host;   
+//     if (hostname === 'pawsomepackadventures.co.nz') {
+//         res.sendFile(path.join(__dirname+'/lisa/client/components/Gallery.jsx'))
+//     }   
+// })
 
-server.get('/contact', function(req, res) {
-    var hostname = req.headers.host;   
-    if (hostname === 'pawsomepackadventures.co.nz') {
-        res.sendFile(path.join(__dirname+'/lisa/components/Form.jsx'))
-    }   
-})
+// server.get('/contact', function(req, res) {
+//     var hostname = req.headers.host;   
+//     if (hostname === 'pawsomepackadventures.co.nz') {
+//         res.sendFile(path.join(__dirname+'/lisa/components/Form.jsx'))
+//     }   
+// })
 
 
 module.exports = server
